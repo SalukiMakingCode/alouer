@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Vous chercher un kot ?</title>
+</head>
+<body>
+<header>
+    <b>Vous chercher une copropriété pour loger pendant vos études ?</b><br/><br/>
+    Bonne nouvelle : Un batiment à moins de 100 mètres est à louer
+</header>
+
+<main>
+    <article id="left">
+        <
+    </article>
+    <div id="batiment">
+        <img src="1.jpg" id="image" alt="">
+    </div>
+    <article id="right">
+        >
+    </article>
+</main>
+
+<div class="blob">
+    Interessé ? <br/><br/>
+    Remplissez ce formulaire, nous vous recontacterons pour une visite :
+</div>
+
+<div class="form">
+    <div>Nom : <br><input type="text"></div>
+
+    <div>Prénom : <br><input type="text"></div>
+
+    <div>Adresse email : <br><input type="text"></div>
+
+    <div>Téléphone : <br><input type="text"></div>
+
+    <article><input type="submit" value="Demander un rendez-vous !"></article>
+</div>
+
+<script>
+    document.getElementById("left").addEventListener("click", () => {
+        let img = document.getElementById("image").src;
+        img = img.substring(img.length - 5);
+        if (img==="1.jpg") document.getElementById("image").src="4.jpg";
+        else if (img==="2.jpg") document.getElementById("image").src="1.jpg";
+        else if (img==="3.jpg") document.getElementById("image").src="2.jpg";
+        else if (img==="4.jpg") document.getElementById("image").src="3.jpg";
+    });
+
+    document.getElementById("right").addEventListener("click", () => {
+        let img = document.getElementById("image").src;
+        img = img.substring(img.length - 5);
+        if (img==="1.jpg") document.getElementById("image").src="2.jpg";
+        else if (img==="2.jpg") document.getElementById("image").src="3.jpg";
+        else if (img==="3.jpg") document.getElementById("image").src="4.jpg";
+        else if (img==="4.jpg") document.getElementById("image").src="1.jpg";
+    });
+</script>
+</body>
+</html>
